@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap');
+
 @font-face {
-    font-family: "BalooTamma2";  
-    src: url("../fonts/static/BalooTamma2-Regular.ttf") format("truetype"); 
+    font-family: "Nunito";  
+    src: url("../fonts/static/Nunito-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "BalooTamma2";  
-    src: url("../fonts/static/BalooTamma2-Medium.ttf") format("truetype"); 
+    font-family: "Nunito";  
+    src: url("../fonts/static/Nunito-Medium.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "BalooTamma2";  
-    src: url("../fonts/static/BalooTamma2-Bold.ttf") format("truetype"); 
+    font-family: "Nunito";  
+    src: url("../fonts/static/Nunito-Bold.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 700;
 }
@@ -64,7 +66,7 @@
 
 
 body{
-    font-family: BalooTamma2;
+    font-family: Nunito;
 }
 
 main{
@@ -100,6 +102,9 @@ main{
     color: #828282;
 }
 
+.nav__link:hover{
+    color: #070707;
+}
 
 
 
@@ -297,7 +302,7 @@ main{
 
 .menu__language{
     font-weight: 700;
-    width: 140px;
+    width: 150px;
     font-size: 34px;
     line-height: 60px;    
     transform: rotate(90deg);
@@ -619,12 +624,24 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
     margin: 29px auto;
-    padding: 8px;
+    padding: 8px 0px;
     padding-top: 11px;
     border-radius: 50px;
+    white-space: nowrap;
+    width: 200px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
+
+.footer__link:hover{
+    transform: scale(0.96);
+}
+
+.footer__link:active{
+    transform: scale(1);
+}
+
 
 
 .footer__list{
@@ -641,10 +658,6 @@ footer{
     line-height: 25px;
     color: #828282;
 }
-
-
-
-
 
 
 
