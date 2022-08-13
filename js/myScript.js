@@ -17,22 +17,25 @@ $('a[href*="#"]').on('click', function() {
 });
 
 
-
+let language = "eng";
 
 $(".ru").click(function () { 
+
+    language = "ru";
+
     $(".ru").addClass("active");
     $(".ru").removeClass("unActive");
     $(".eng").removeClass("active");
     $(".eng").addClass("unActive");
 
 
-    $(".menu__list__link").eq(0).text("Дом");
+    $(".menu__list__link").eq(0).text("Домой");
     $(".menu__list__link").eq(1).text("Обо мне");
     $(".menu__list__link").eq(2).text("Навыки");
     $(".menu__list__link").eq(3).text("Портфолио");
     $(".menu__list__link").eq(4).text("Контакты");
 
-    $(".nav__link").eq(0).text("Дом");
+    $(".nav__link").eq(0).text("Домой");
     $(".nav__link").eq(1).text("Обо мне");
     $(".nav__link").eq(2).text("Навыки");
     $(".nav__link").eq(3).text("Портфолио");
@@ -64,6 +67,9 @@ $(".ru").click(function () {
 });
 
 $(".eng").click(function () { 
+
+    language = "eng";
+
     $(".eng").addClass("active");
     $(".eng").removeClass("unActive");
     $(".ru").removeClass("active");
