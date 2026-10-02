@@ -11,133 +11,92 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
 
-  <!-- Шапка -->
   <header class="header">
     <div class="header__inner">
-      <a href="#top" class="logo">
+      <a href="index.html" class="logo">
         <img src="assets/img/avatar.jpg" alt="" class="logo__avatar" width="32" height="32">
         <span>Oleg Jakimush</span>
       </a>
-
       <nav class="nav" aria-label="Main">
-        <a href="#work" class="nav__link" data-i18n="nav.work">Работы</a>
-        <a href="#about" class="nav__link" data-i18n="nav.about">Обо мне</a>
-        <a href="#services" class="nav__link" data-i18n="nav.services">Услуги</a>
-        <a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+        <a href="works.html" class="nav__link" data-i18n="nav.work">Работы</a>
+        <a href="index.html#about" class="nav__link" data-i18n="nav.about">Обо мне</a>
+        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
       </nav>
-
       <div class="header__actions">
         <div class="lang" role="group" aria-label="Language">
           <button class="lang__btn" data-lang="ru" type="button">RU</button>
           <button class="lang__btn" data-lang="en" type="button">EN</button>
         </div>
-        <a href="#contact" class="btn btn--dark btn--sm header__cta" data-i18n="nav.cta">Связаться</a>
+        <a href="index.html#contact" class="btn btn--dark btn--sm header__cta" data-i18n="nav.cta">Связаться</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
+  <main>
 
     <!-- Hero -->
     <section class="hero container">
-      <div class="hero__text">
-        <div class="status reveal">
+      <div class="hero__intro reveal">
+        <img src="assets/img/avatar.jpg" alt="Oleg Jakimush" class="hero__avatar" width="72" height="72">
+        <div>
+          <p class="hero__name">Oleg Jakimush</p>
+          <p class="hero__role" data-i18n="hero.role">Дизайнер и вайбкодер</p>
+        </div>
+      </div>
+
+      <h1 class="hero__title reveal" data-i18n="hero.title">
+        Создаю понятные интерфейсы и превращаю их в живые продукты с помощью AI.
+      </h1>
+
+      <div class="hero__bottom reveal">
+        <div class="status">
           <span class="status__dot"></span>
           <span data-i18n="hero.status">Открыт к новым проектам</span>
         </div>
-
-        <h1 class="hero__title reveal">
-          Oleg Jakimush
-        </h1>
-
-        <p class="hero__lead reveal" data-i18n="hero.lead">
-          Дизайнер и вайбкодер. Придумываю интерфейсы и сайты — и сам довожу их до работающего продукта с помощью AI.
-        </p>
-
-        <div class="hero__buttons reveal">
+        <div class="hero__buttons">
           <a href="#work" class="btn btn--dark" data-i18n="hero.btnWork">Смотреть работы</a>
           <a href="#contact" class="btn btn--light" data-i18n="hero.btnContact">Написать мне</a>
         </div>
       </div>
-
-      <figure class="hero__photo reveal">
-        <img src="assets/img/oleg.jpg" alt="Oleg Jakimush" width="1000" height="1097">
-        <figcaption class="hero__badge">
-          <span>Design</span>
-          <span class="hero__badge-x">×</span>
-          <span>Vibe coding</span>
-        </figcaption>
-      </figure>
     </section>
 
-    <!-- Бегущая строка -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>UI/UX Design</span><i>✦</i>
-        <span>Web Design</span><i>✦</i>
-        <span>Vibe Coding</span><i>✦</i>
-        <span>Prototyping</span><i>✦</i>
-        <span>Landing Pages</span><i>✦</i>
-        <span>AI-powered MVP</span><i>✦</i>
-        <span>UI/UX Design</span><i>✦</i>
-        <span>Web Design</span><i>✦</i>
-        <span>Vibe Coding</span><i>✦</i>
-        <span>Prototyping</span><i>✦</i>
-        <span>Landing Pages</span><i>✦</i>
-        <span>AI-powered MVP</span><i>✦</i>
-      </div>
-    </div>
-
-    <!-- Работы -->
+    <!-- Избранные работы -->
     <section class="section container" id="work">
       <div class="section__head reveal">
         <h2 class="section__title">
           <span data-i18n="work.title">Избранные работы</span>
-          <sup class="section__count" id="work-count"></sup>
+          <sup class="section__count" data-count="featured"></sup>
         </h2>
-        <p class="section__sub" data-i18n="work.sub">Проекты в дизайне и вайбкодинге. Скоро здесь будет больше.</p>
+        <a href="works.html" class="link-arrow" data-i18n="work.all">Все работы →</a>
       </div>
-
-      <!-- Карточки рендерятся из js/data.js -->
-      <div class="works" id="works"></div>
+      <div class="works" data-works="featured"></div>
     </section>
 
     <!-- Обо мне -->
     <section class="section container" id="about">
       <div class="about">
-        <div class="about__label reveal">
-          <span class="eyebrow" data-i18n="about.label">Обо мне</span>
-        </div>
+        <figure class="about__photo reveal">
+          <img src="assets/img/oleg.jpg" alt="Oleg Jakimush" loading="lazy">
+        </figure>
         <div class="about__body">
+          <span class="eyebrow reveal" data-i18n="about.label">Обо мне</span>
           <p class="about__big reveal" data-i18n="about.big">
-            Привет! Я Олег — дизайнер, который не останавливается на макете. Делаю понятные и красивые интерфейсы, а потом превращаю их в живые сайты и прототипы вместе с AI.
+            Привет! Я Олег — дизайнер, который не останавливается на макете.
           </p>
           <p class="about__small reveal" data-i18n="about.small">
-            Мне нравится короткий путь от идеи до результата: вместо долгих передач «дизайн → разработка» я сразу собираю рабочую версию, тестирую её и докручиваю детали.
+            Делаю понятные и красивые интерфейсы, а потом сам собираю из них живые сайты и прототипы вместе с AI. Короткий путь от идеи до результата: без долгих передач «дизайн → разработка».
           </p>
 
-          <div class="steps">
-            <div class="step reveal">
-              <span class="step__num">01</span>
-              <h3 class="step__title" data-i18n="about.s1t">Разбираюсь</h3>
-              <p class="step__text" data-i18n="about.s1">Задача, аудитория, референсы и цель проекта.</p>
-            </div>
-            <div class="step reveal">
-              <span class="step__num">02</span>
-              <h3 class="step__title" data-i18n="about.s2t">Проектирую</h3>
-              <p class="step__text" data-i18n="about.s2">Структура, визуальный стиль и дизайн в Figma.</p>
-            </div>
-            <div class="step reveal">
-              <span class="step__num">03</span>
-              <h3 class="step__title" data-i18n="about.s3t">Собираю</h3>
-              <p class="step__text" data-i18n="about.s3">Вайбкодинг: рабочий сайт или прототип с помощью AI.</p>
-            </div>
-          </div>
+          <ul class="facts reveal">
+            <li><span data-i18n="about.f1k">Фокус</span><b data-i18n="about.f1v">UI/UX и веб-дизайн</b></li>
+            <li><span data-i18n="about.f2k">Подход</span><b data-i18n="about.f2v">Дизайн + вайбкодинг</b></li>
+            <li><span data-i18n="about.f3k">Инструменты</span><b>Figma, Framer, Claude Code, Cursor</b></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -147,61 +106,40 @@
       <div class="section__head reveal">
         <h2 class="section__title" data-i18n="services.title">Чем могу помочь</h2>
       </div>
-
-      <ul class="services">
-        <li class="service reveal">
-          <span class="service__num">01</span>
-          <h3 class="service__title" data-i18n="services.s1t">UI/UX дизайн</h3>
-          <p class="service__text" data-i18n="services.s1">Интерфейсы приложений и сервисов: от user flow до готовых экранов.</p>
-        </li>
-        <li class="service reveal">
-          <span class="service__num">02</span>
-          <h3 class="service__title" data-i18n="services.s2t">Веб-дизайн</h3>
-          <p class="service__text" data-i18n="services.s2">Лендинги, портфолио и сайты для бизнеса с аккуратной типографикой.</p>
-        </li>
-        <li class="service reveal">
-          <span class="service__num">03</span>
-          <h3 class="service__title" data-i18n="services.s3t">Вайбкодинг</h3>
-          <p class="service__text" data-i18n="services.s3">Превращаю дизайн в работающий сайт или MVP с помощью AI-инструментов.</p>
-        </li>
-        <li class="service reveal">
-          <span class="service__num">04</span>
-          <h3 class="service__title" data-i18n="services.s4t">Прототипы</h3>
-          <p class="service__text" data-i18n="services.s4">Быстрые кликабельные и живые прототипы, чтобы проверить идею.</p>
-        </li>
-      </ul>
-
-      <div class="tools reveal">
-        <span class="eyebrow" data-i18n="services.tools">Инструменты</span>
-        <ul class="tools__list">
-          <li>Figma</li>
-          <li>Framer</li>
-          <li>Photoshop</li>
-          <li>Illustrator</li>
-          <li>Claude Code</li>
-          <li>Cursor</li>
-          <li>HTML / CSS / JS</li>
-        </ul>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3 class="card__title" data-i18n="services.s1t">UI/UX дизайн</h3>
+          <p class="card__text" data-i18n="services.s1">Интерфейсы приложений и сервисов: от user flow до готовых экранов.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">02</span>
+          <h3 class="card__title" data-i18n="services.s2t">Веб-дизайн</h3>
+          <p class="card__text" data-i18n="services.s2">Лендинги, портфолио и сайты для бизнеса с аккуратной типографикой.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">03</span>
+          <h3 class="card__title" data-i18n="services.s3t">Вайбкодинг</h3>
+          <p class="card__text" data-i18n="services.s3">Превращаю дизайн в работающий сайт, прототип или MVP с помощью AI.</p>
+        </article>
       </div>
     </section>
 
     <!-- Контакты -->
     <section class="section container" id="contact">
       <div class="contact reveal">
-        <span class="eyebrow eyebrow--light" data-i18n="contact.label">Контакты</span>
+        <span class="eyebrow" data-i18n="contact.label">Контакты</span>
         <h2 class="contact__title" data-i18n="contact.title">Есть идея? Давайте сделаем её вместе.</h2>
         <p class="contact__sub" data-i18n="contact.sub">Пишите в почту или телеграм — отвечаю быстро.</p>
-
-        <!-- Список рендерится из js/data.js -->
-        <ul class="contact__list" id="contacts"></ul>
+        <ul class="contact__list" data-contacts></ul>
       </div>
     </section>
 
   </main>
 
   <footer class="footer container">
-    <span>© <span id="year">2026</span> Oleg Jakimush</span>
-    <a href="#top" class="footer__top" data-i18n="footer.top">Наверх ↑</a>
+    <span>© <span data-year>2026</span> Oleg Jakimush</span>
+    <a href="#" class="footer__top" data-i18n="footer.top">Наверх ↑</a>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

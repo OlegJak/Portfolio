@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работы — Oleg Jakimush</title>
+  <meta name="description" content="Oleg Jakimush — дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы от идеи до работающего продукта.">
+  <meta property="og:title" content="Oleg Jakimush — Design & Vibe coding">
+  <meta property="og:description" content="Дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы.">
+  <meta property="og:image" content="assets/img/oleg.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="works">
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/avatar.jpg" alt="" class="logo__avatar" width="32" height="32">
+        <span>Oleg Jakimush</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="works.html" class="nav__link" data-i18n="nav.work">Работы</a>
+        <a href="index.html#about" class="nav__link" data-i18n="nav.about">Обо мне</a>
+        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang__btn" data-lang="ru" type="button">RU</button>
+          <button class="lang__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a href="index.html#contact" class="btn btn--dark btn--sm header__cta" data-i18n="nav.cta">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero container">
+      <span class="eyebrow reveal" data-i18n="work.eyebrow">Портфолио</span>
+      <h1 class="page-hero__title reveal">
+        <span data-i18n="work.allTitle">Все работы</span>
+        <sup class="section__count" data-count="all"></sup>
+      </h1>
+      <p class="page-hero__sub reveal" data-i18n="work.allSub">Дизайн интерфейсов, сайты и проекты, собранные с помощью вайбкодинга.</p>
+    </section>
+
+    <section class="container">
+      <div class="works" data-works="all"></div>
+    </section>
+
+
+    <!-- Контакты -->
+    <section class="section container" id="contact">
+      <div class="contact reveal">
+        <span class="eyebrow" data-i18n="contact.label">Контакты</span>
+        <h2 class="contact__title" data-i18n="contact.title">Есть идея? Давайте сделаем её вместе.</h2>
+        <p class="contact__sub" data-i18n="contact.sub">Пишите в почту или телеграм — отвечаю быстро.</p>
+        <ul class="contact__list" data-contacts></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <span>© <span data-year>2026</span> Oleg Jakimush</span>
+    <a href="#" class="footer__top" data-i18n="footer.top">Наверх ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

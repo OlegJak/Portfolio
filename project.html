@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проект — Oleg Jakimush</title>
+  <meta name="description" content="Oleg Jakimush — дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы от идеи до работающего продукта.">
+  <meta property="og:title" content="Oleg Jakimush — Design & Vibe coding">
+  <meta property="og:description" content="Дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы.">
+  <meta property="og:image" content="assets/img/oleg.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="project">
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/avatar.jpg" alt="" class="logo__avatar" width="32" height="32">
+        <span>Oleg Jakimush</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="works.html" class="nav__link" data-i18n="nav.work">Работы</a>
+        <a href="index.html#about" class="nav__link" data-i18n="nav.about">Обо мне</a>
+        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang__btn" data-lang="ru" type="button">RU</button>
+          <button class="lang__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a href="index.html#contact" class="btn btn--dark btn--sm header__cta" data-i18n="nav.cta">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Кейс рендерится из js/data.js по параметру ?p=slug -->
+    <article class="case container" data-case>
+      <a href="works.html" class="link-arrow link-arrow--back reveal" data-i18n="case.back">← Все работы</a>
+      <header class="case__head reveal">
+        <span class="eyebrow" data-case-category></span>
+        <h1 class="case__title" data-case-title></h1>
+        <p class="case__short" data-case-short></p>
+      </header>
+
+      <dl class="case__meta reveal">
+        <div><dt data-i18n="case.client">Клиент</dt><dd data-case-client></dd></div>
+        <div><dt data-i18n="case.year">Год</dt><dd data-case-year></dd></div>
+        <div><dt data-i18n="case.role">Роль</dt><dd data-case-role></dd></div>
+        <div><dt data-i18n="case.services">Услуги</dt><dd data-case-services></dd></div>
+      </dl>
+
+      <div class="case__cover reveal" data-case-cover></div>
+
+      <div class="case__text">
+        <section class="case__block reveal">
+          <h2 data-i18n="case.overview">Обзор</h2>
+          <p data-case-overview></p>
+        </section>
+        <section class="case__block reveal">
+          <h2 data-i18n="case.challenge">Задача</h2>
+          <p data-case-challenge></p>
+        </section>
+        <section class="case__block reveal">
+          <h2 data-i18n="case.solution">Решение</h2>
+          <p data-case-solution></p>
+        </section>
+        <a class="btn btn--dark case__live" data-case-live target="_blank" rel="noopener" hidden>
+          <span data-i18n="case.live">Открыть проект</span> ↗
+        </a>
+      </div>
+
+      <div class="case__gallery" data-case-gallery></div>
+
+      <a class="case__next reveal" data-case-next>
+        <span class="eyebrow" data-i18n="case.next">Следующий проект</span>
+        <span class="case__next-title" data-case-next-title></span>
+      </a>
+    </article>
+
+
+    <!-- Контакты -->
+    <section class="section container" id="contact">
+      <div class="contact reveal">
+        <span class="eyebrow" data-i18n="contact.label">Контакты</span>
+        <h2 class="contact__title" data-i18n="contact.title">Есть идея? Давайте сделаем её вместе.</h2>
+        <p class="contact__sub" data-i18n="contact.sub">Пишите в почту или телеграм — отвечаю быстро.</p>
+        <ul class="contact__list" data-contacts></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <span>© <span data-year>2026</span> Oleg Jakimush</span>
+    <a href="#" class="footer__top" data-i18n="footer.top">Наверх ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
