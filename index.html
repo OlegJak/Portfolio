@@ -1,152 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oleg Jak</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oleg Jakimush — Design & Vibe coding</title>
+  <meta name="description" content="Oleg Jakimush — дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы от идеи до работающего продукта.">
+  <meta property="og:title" content="Oleg Jakimush — Design & Vibe coding">
+  <meta property="og:description" content="Дизайнер и вайбкодер. Интерфейсы, сайты и AI-прототипы.">
+  <meta property="og:image" content="assets/img/oleg.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-        <div class="preloader">
-            <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-                </path>
-            </svg>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#top" class="logo">
+        <img src="assets/img/avatar.jpg" alt="" class="logo__avatar" width="32" height="32">
+        <span>Oleg Jakimush</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#work" class="nav__link" data-i18n="nav.work">Работы</a>
+        <a href="#about" class="nav__link" data-i18n="nav.about">Обо мне</a>
+        <a href="#services" class="nav__link" data-i18n="nav.services">Услуги</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang__btn" data-lang="ru" type="button">RU</button>
+          <button class="lang__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a href="#contact" class="btn btn--dark btn--sm header__cta" data-i18n="nav.cta">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero__text">
+        <div class="status reveal">
+          <span class="status__dot"></span>
+          <span data-i18n="hero.status">Открыт к новым проектам</span>
         </div>
 
-        <main>
+        <h1 class="hero__title reveal">
+          Oleg Jakimush
+        </h1>
 
-            <div class="menu">
-                <div class="menu__container">
-                    <div class="menu__col__1">
-                        <ul class="menu__list">
-                            <li class="menu__list__item"><a href="#home" class="menu__list__link">Home</a></li>
-                            <li class="menu__list__item"><a href="#aboutMe" class="menu__list__link">About me</a></li>
-                            <li class="menu__list__item"><a href="#skills" class="menu__list__link">Skills</a></li>
-                            <li class="menu__list__item"><a href="#portfolio" class="menu__list__link">Portfolio</a></li>
-                            <li class="menu__list__item"><a href="#contacts" class="menu__list__link">Contacts</a></li>
-                        </ul>
-                        <img src="img/cross.svg" alt="cross" class="menu__cross">
-                    </div>
-                    <div class="menu__language__container">
-                        <div class="menu__language"><span class="unActive ru">RU</span> | <span class="active eng">ENG</span></div>
-                    </div>
-                    
-                </div>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          Дизайнер и вайбкодер. Придумываю интерфейсы и сайты — и сам довожу их до работающего продукта с помощью AI.
+        </p>
+
+        <div class="hero__buttons reveal">
+          <a href="#work" class="btn btn--dark" data-i18n="hero.btnWork">Смотреть работы</a>
+          <a href="#contact" class="btn btn--light" data-i18n="hero.btnContact">Написать мне</a>
+        </div>
+      </div>
+
+      <figure class="hero__photo reveal">
+        <img src="assets/img/oleg.jpg" alt="Oleg Jakimush" width="1000" height="1097">
+        <figcaption class="hero__badge">
+          <span>Design</span>
+          <span class="hero__badge-x">×</span>
+          <span>Vibe coding</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>UI/UX Design</span><i>✦</i>
+        <span>Web Design</span><i>✦</i>
+        <span>Vibe Coding</span><i>✦</i>
+        <span>Prototyping</span><i>✦</i>
+        <span>Landing Pages</span><i>✦</i>
+        <span>AI-powered MVP</span><i>✦</i>
+        <span>UI/UX Design</span><i>✦</i>
+        <span>Web Design</span><i>✦</i>
+        <span>Vibe Coding</span><i>✦</i>
+        <span>Prototyping</span><i>✦</i>
+        <span>Landing Pages</span><i>✦</i>
+        <span>AI-powered MVP</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- Работы -->
+    <section class="section container" id="work">
+      <div class="section__head reveal">
+        <h2 class="section__title">
+          <span data-i18n="work.title">Избранные работы</span>
+          <sup class="section__count" id="work-count"></sup>
+        </h2>
+        <p class="section__sub" data-i18n="work.sub">Проекты в дизайне и вайбкодинге. Скоро здесь будет больше.</p>
+      </div>
+
+      <!-- Карточки рендерятся из js/data.js -->
+      <div class="works" id="works"></div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="section container" id="about">
+      <div class="about">
+        <div class="about__label reveal">
+          <span class="eyebrow" data-i18n="about.label">Обо мне</span>
+        </div>
+        <div class="about__body">
+          <p class="about__big reveal" data-i18n="about.big">
+            Привет! Я Олег — дизайнер, который не останавливается на макете. Делаю понятные и красивые интерфейсы, а потом превращаю их в живые сайты и прототипы вместе с AI.
+          </p>
+          <p class="about__small reveal" data-i18n="about.small">
+            Мне нравится короткий путь от идеи до результата: вместо долгих передач «дизайн → разработка» я сразу собираю рабочую версию, тестирую её и докручиваю детали.
+          </p>
+
+          <div class="steps">
+            <div class="step reveal">
+              <span class="step__num">01</span>
+              <h3 class="step__title" data-i18n="about.s1t">Разбираюсь</h3>
+              <p class="step__text" data-i18n="about.s1">Задача, аудитория, референсы и цель проекта.</p>
             </div>
-
-
-
-            <section class="section__1" id="home">
-                <nav>
-                    <ul class="nav__list">
-                        <li class="nav__list__item"><a href="#home" class="nav__link">Home</a></li>
-                        <li class="nav__list__item"><a href="#aboutMe" class="nav__link">About me</a></li>
-                        <li class="nav__list__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__list__item"><a href="#portfolio" class="nav__link">Porfolio</a></li>
-                        <li class="nav__list__item"><a href="#contacts" class="nav__link">Contacts</a></li>
-                    </ul>
-                    <div class="nav__line"></div>
-                </nav>
-
-
-
-                    <div class="section__1__container__2">
-                        <div class="section__1__container">
-                            <div class="section__1__contant__1">Oleg Jak</div>
-                            <div class="section__1__contant__2">Front-end web developer</div>
-                            <div class="section__1__contant__3"><span class="unActive ru">RU</span> | <span class="active eng">ENG</span></div>
-                        </div>
-        
-                        <div class="section__1__contant__menu"><img src="img/menu.svg" alt="Menu" class="menu__img"></div>
-        
-        
-                    </div>
-        
-        
-        
-        
-        
-        
-                    <div class="section__1__img__container"></div>
-                </section>
-
-            <section class="section__2" id="aboutMe">
-                <div class="section__2__container">
-                    <h2 class="section__2__h2">About me</h2>
-                    <p class="section__2__p">Hi, I'm Oleg – front end developer. <br>
-                        I am constantly learning new things.</p>
-                    <p class="section__2__p">
-                        I work well with languages such as HTML, CSS, JavaScript.
-                        Also familiar with jQuery and Bootstrap.</p>
-                    <p class="section__2__p">Ready to implement excellent projects
-                        with wonderful people.</p>
-                </div>
-    
-            </section>
-    
-            <section class="section__3" id="skills">
-                <div class="section__3__h2">Skills</div>
-                <div class="section__3__p">I work in such programs as</div>
-                <div class="section__3__container">
-                    <div class="section__3__col__1">
-                        <img src="img/Photoshop.svg" alt="" class="section__3__img">
-                        <img src="img/vsCode.png" alt="" class="section__3__img" id="vsCode">
-                    </div>
-                    <div class="section__3__col__2">
-                        <img src="img/illustrator.svg" alt="" class="section__3__img">
-                        <img src="img/figma.svg" alt="" class="section__3__img">
-                    </div>
-                </div>
-            </section>
-    
-            <section class="section__4" id="portfolio">
-                <div class="section__4__container">
-                    <h2 class="section__4__h2">
-                        Portfolio
-                    </h2>
-                    <div class="img__portfolio__container">
-                        <a href="https://olegjak.github.io/Gagarin/" target=»_blank» class="section__4__link"><img src="img/gagarin.jpg" alt="gagarin" class="section__4__img"></a>
-                        <a href="https://olegjak.github.io/Gagarin/" target=»_blank» class="section__4__link">Gagarin</a>
-                    </div>
-                    <div class="img__portfolio__container">
-                        <a href="https://olegjak.github.io/SOLAR-EXE/" target=»_blank» class="section__4__link"><img src="img/solarExe.jpg" alt="Solar Exe" class="section__4__img"></a>
-                        <a href="https://olegjak.github.io/SOLAR-EXE/" target=»_blank» class="section__4__link">Solar Exe</a>
-                    </div>
-                    <div class="img__portfolio__container">
-                        <a href="https://olegjak.github.io/Food-hunt/" target=»_blank» class="section__4__link"><img src="img/foodHunt.jpg" alt="Food Hunt" class="section__4__img"></a>
-                        <a href="https://olegjak.github.io/Food-hunt/" target=»_blank» class="section__4__link">Food Hunt</a>
-                    </div>
-                </div>
-                
-    
-            </section>
-
-        </main>
-
-        <footer id="contacts">
-            <div class="footer__container">
-                <div class="footer__h2">
-                    Contacts
-                </div>
-                <div class="footer__p">Want to know more or just chat?<br> You are welcome!</div>
-                <a href="mailto:yakimush.oleg@mail.ru" class="footer__link">Send message</a>
-                <ul class="footer__list">
-                    <li class="footer__list__item"><a href="https://www.linkedin.com/in/oleg-jakimush-57697b238/" class="footer__img__link"><img src="img/linkedIn.svg" alt="Linked In" class="footer__img"></a></li>
-                    <li class="footer__list__item"><a href="https://www.instagram.com/oleg_jak/?hl=ru" class="footer__img__link"><img src="img/intagram.svg" alt="Instagram" class="footer__img"></a></li>
-                    <li class="footer__list__item"><a href="https://www.upwork.com/freelancers/~0145f056b6f52b3163" class="footer__img__link"><img src="img/upWork.svg" alt="Upwork" class="footer__img"></a></li>
-                    <li class="footer__list__item"><a href="https://github.com/OlegJak" class="footer__img__link"><img src="img/gitHub.svg" alt="Github" class="footer__img"></a></li>
-                </ul>
-                <p class="footer__p__light">Like me on<br>
-                    LinkedIn, Instagram, Upwork, Github</p>
+            <div class="step reveal">
+              <span class="step__num">02</span>
+              <h3 class="step__title" data-i18n="about.s2t">Проектирую</h3>
+              <p class="step__text" data-i18n="about.s2">Структура, визуальный стиль и дизайн в Figma.</p>
             </div>
-        </footer>
+            <div class="step reveal">
+              <span class="step__num">03</span>
+              <h3 class="step__title" data-i18n="about.s3t">Собираю</h3>
+              <p class="step__text" data-i18n="about.s3">Вайбкодинг: рабочий сайт или прототип с помощью AI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/myScript.js"></script>
-    </body>
+    <!-- Услуги -->
+    <section class="section container" id="services">
+      <div class="section__head reveal">
+        <h2 class="section__title" data-i18n="services.title">Чем могу помочь</h2>
+      </div>
+
+      <ul class="services">
+        <li class="service reveal">
+          <span class="service__num">01</span>
+          <h3 class="service__title" data-i18n="services.s1t">UI/UX дизайн</h3>
+          <p class="service__text" data-i18n="services.s1">Интерфейсы приложений и сервисов: от user flow до готовых экранов.</p>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">02</span>
+          <h3 class="service__title" data-i18n="services.s2t">Веб-дизайн</h3>
+          <p class="service__text" data-i18n="services.s2">Лендинги, портфолио и сайты для бизнеса с аккуратной типографикой.</p>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">03</span>
+          <h3 class="service__title" data-i18n="services.s3t">Вайбкодинг</h3>
+          <p class="service__text" data-i18n="services.s3">Превращаю дизайн в работающий сайт или MVP с помощью AI-инструментов.</p>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">04</span>
+          <h3 class="service__title" data-i18n="services.s4t">Прототипы</h3>
+          <p class="service__text" data-i18n="services.s4">Быстрые кликабельные и живые прототипы, чтобы проверить идею.</p>
+        </li>
+      </ul>
+
+      <div class="tools reveal">
+        <span class="eyebrow" data-i18n="services.tools">Инструменты</span>
+        <ul class="tools__list">
+          <li>Figma</li>
+          <li>Framer</li>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>Claude Code</li>
+          <li>Cursor</li>
+          <li>HTML / CSS / JS</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section container" id="contact">
+      <div class="contact reveal">
+        <span class="eyebrow eyebrow--light" data-i18n="contact.label">Контакты</span>
+        <h2 class="contact__title" data-i18n="contact.title">Есть идея? Давайте сделаем её вместе.</h2>
+        <p class="contact__sub" data-i18n="contact.sub">Пишите в почту или телеграм — отвечаю быстро.</p>
+
+        <!-- Список рендерится из js/data.js -->
+        <ul class="contact__list" id="contacts"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year">2026</span> Oleg Jakimush</span>
+    <a href="#top" class="footer__top" data-i18n="footer.top">Наверх ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
